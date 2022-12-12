@@ -21,17 +21,16 @@
 // WAY 2
 
 const mongoose = require("mongoose");
+mongoose.set('strictQuery', true);
 
 const { MONGO_URL } = process.env;
 
 exports.connect = () => {
   //Connecting to the mongoDB
   mongoose
-    .connect(MONGO_URL, {
+    .connect(MONGO_URL || "mongodb://127.0.0.1:27017/", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      useCreatIndex: true,
-      useFindAndModify: true,
     })
     .then(() => {
       console.log("Connected to Database Successfully!");
