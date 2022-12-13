@@ -80,6 +80,7 @@
     }
 }
 
+/* Header Styles, common for all the headers */
 header {
     padding: 20px 0;
     background-color: white;
@@ -127,19 +128,84 @@ header nav ul li.active {
     color: black;
 }
 
-section#hero,
-section#mission {
+@media screen and (max-width: 900px) {
+    header nav {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        transform: translateX(100%);
+        transition: transform 1s ease-out;
+        padding: 50px 0;
+    }
+    header nav.open {
+        transform: translateX(0%);
+    }
+
+    header nav ul {
+        flex-direction: column;
+        height: 100%;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+header .menu {
+    display: flex;
+    width: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 99;
+    position: relative;
+}
+
+header .menu span {
+    height: 3px;
+    width: 100%;
+    display: block;
+    background-color: black;
+    transition: 300ms ease-out;
+    transform-origin: center;
+}
+
+header .menu.open span:first-child {
+    rotate: 45deg;
+    translate: 0px 7.5px;
+}
+header .menu.open span:nth-child(2) {
+    opacity: 0;
+}
+header .menu.open span:last-child {
+    rotate: -45deg;
+    translate: 0px -7.5px;
+}
+
+/* About page styles */
+#about section#hero,
+#about section#mission {
     background-color: var(--secondary-blue);
 }
 
-section#hero section {
+#about section#hero section {
     display: flex;
     justify-content: space-between;
     gap: 100px;
     align-items: center;
 }
 
-section#hero section article {
+@media screen and (max-width: 900px) {
+    #about section#hero section {
+        flex-direction: column-reverse;
+    }
+}
+
+#about section#hero section article {
     display: grid;
     gap: 20px;
     align-items: flex-start;
@@ -148,65 +214,81 @@ section#hero section article {
     flex: none;
 }
 
-section#hero section article h2 {
+#about section#hero section article h2 {
     font-size: 34px;
     font-weight: 700;
 }
 
-section#hero section article p {
+#about section#hero section article p {
     font-size: 20px;
     font-weight: 500;
 }
 
-section#hero section .hero-image-wrapper {
+#about section#hero section .hero-image-wrapper {
     width: 100%;
 }
 
-section#mission section {
+#about section#mission section {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-section#mission section p {
+@media screen and (max-width: 900px) {
+    #about section#mission section {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+#about section#mission section p {
     max-width: 480px;
     font-size: 20px;
     font-weight: 500;
 }
 
-section#free-templates {
+#about section#free-templates {
     overflow: hidden;
 }
 
-section#free-templates button {
+#about section#free-templates button {
     display: block;
     margin: 0 auto;
 }
 
-section#get-started section {
+#about section#get-started section {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-section#get-started section article {
+@media screen and (max-width: 900px) {
+    #about section#get-started section {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+}
+
+#about section#get-started section article {
     max-width: 592px;
     display: grid;
     gap: 20px;
 }
-section#get-started section article h3 {
+#about section#get-started section article h3 {
     font-weight: 700;
     font-size: 30px;
     line-height: 150%;
 }
 
-section#get-started section article p {
+#about section#get-started section article p {
     max-width: 529px;
     font-weight: 500;
     font-size: 20px;
     line-height: 150%;
 }
+/* About page styles End...... */
 
+/* Footer Styles, common for all the footers */
 footer {
     background-color: var(--primary-dark-blue);
 }
@@ -221,6 +303,13 @@ footer .top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+@media screen and (max-width: 900px) {
+    footer .top {
+        flex-direction: column;
+        gap: 50px;
+    }
 }
 
 footer .top nav {
@@ -288,19 +377,18 @@ footer .bottom {
     color: white;
 }
 
-@layer swiper {
-    .swiper {
-        overflow: visible;
-        margin-bottom: 100px;
-    }
+/* Swiepr in about page */
+#about .swiper {
+    overflow: visible;
+    margin-bottom: 100px;
+}
 
-    .swiper .swiper-pagination {
-        bottom: -70px;
-    }
+#about .swiper .swiper-pagination {
+    bottom: -70px;
+}
 
-    .swiper .swiper-pagination .swiper-pagination-bullet {
-        width: 20px;
-        height: 20px;
-        margin: 0px 7.5px;
-    }
+#about .swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    margin: 0px 7.5px;
 }
