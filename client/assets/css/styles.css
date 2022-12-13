@@ -142,6 +142,7 @@ header nav ul li.active {
         transform: translateX(100%);
         transition: transform 1s ease-out;
         padding: 50px 0;
+        z-index: 999;
     }
     header nav.open {
         transform: translateX(0%);
@@ -163,7 +164,7 @@ header .menu {
     justify-content: space-between;
     gap: 5px;
     cursor: pointer;
-    z-index: 99;
+    z-index: 1000;
     position: relative;
 }
 
