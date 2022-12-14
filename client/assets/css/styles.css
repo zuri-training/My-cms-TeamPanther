@@ -11,6 +11,7 @@
     --grey-600: #282529;
 }
 
+
 @layer base {
     *,
     html,
@@ -20,6 +21,7 @@
         box-sizing: border-box;
     }
 
+   
     h1,
     h2,
     h3,
@@ -47,6 +49,11 @@
         padding: 0px 20px;
         margin: 0 auto;
     }
+
+
+    
+  
+
 }
 
 @layer components {
@@ -63,6 +70,10 @@
         width: max-content;
         border: none;
     }
+    
+button{
+    background-color: black;
+}
 
     .btn.btn-primary {
         background: var(--primary-blue);
@@ -84,7 +95,7 @@
 
 /* Header Styles, common for all the headers */
 header {
-    padding: 20px 0;
+    padding: 30px 0;
     background-color: white;
 }
 
@@ -291,6 +302,27 @@ footer .bottom {
     color: white;
 }
 
+<<<<<<< HEAD
+
+
+
+
+@layer swiper {
+    .swiper {
+        overflow: visible;
+        margin-bottom: 100px;
+    }
+
+    .swiper .swiper-pagination {
+        bottom: -70px;
+    }
+
+    .swiper .swiper-pagination .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        margin: 0px 7.5px;
+    }
+=======
 /* Swiepr in about page */
 #about .swiper {
     overflow: visible;
@@ -305,4 +337,7 @@ footer .bottom {
     width: 20px;
     height: 20px;
     margin: 0px 7.5px;
+>>>>>>> 863c20e7e37c65c0527ab90cc8df4ef5ccdfc95e
 }
+
+
