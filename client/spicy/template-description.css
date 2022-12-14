@@ -1,0 +1,99 @@
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 20px;
+}
+
+button {
+    color: #fff;
+    background-color: #0E83B5;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* ===== HERO ===== */
+.hero {
+    padding: 60px;
+}
+
+.hero .container {
+    display: flex;
+    gap: 1rem;
+    padding-inline: 4rem;
+}
+
+.hero h1 {
+    line-height: 1.4;
+    margin-block: 1rem;
+}
+
+.hero p {
+    color: #282529;
+}
+
+.hero .left .swiper-page {
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.hero .right img {
+    width: 100px;
+    margin-block: .9rem;
+}
+
+.hero .btn-group {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.hero .btn-group img {
+    width: 55px;
+} 
+
+/* ===== MAIN ===== */
+
+main small {
+    display: inline-block;
+    margin-block: 1.3rem;
+}
+
+main .templates {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+/* ==== EXPLORE MORE ===== */
+div.container {
+    padding: unset;
+}
+
+.explore-more {
+    margin-top: 3rem;
+}
+
+.explore-more h2 {
+    margin-block: 1.2rem;
+}
+
+.more-templates {
+    display: flex;
+    gap: 1rem;
+}
