@@ -5,9 +5,11 @@ const AppError = require("./server/utils/appError"); //Error message creator obj
 const globalErrorHandler = require("./server/controller/errorController");
 const auth = require("./server/controller/authController");
 const morgan = require("morgan");
+const path = require("path");
 
 // IMPORT ROUTES
 const userRoutes = require("./server/routes/userRoutes");
+const pageRoutes = require("./server/routes/pageRoutes");
 
 //IMPORT DB CONNECTION
 const connect = require("./server/database/connection"); //connecting to the dataBase
@@ -19,20 +21,22 @@ const app = express(); //instantiating
 
 // MIDDLE-WARES
 app.use(express.urlencoded({ extended: true }));
+app.use("/", pageRoutes);
+app.use(express.static(path.join(__dirname, "client")));
 app.use(json()); // Enable parsing of json objects in body of request
 app.use(morgan("dev"));
 
 //ROUTES
 app.use("/home", userRoutes); //Defining a middle-ware, a path to display todo items/create/update/delete
 app.get("/home", auth.protect, (req, res) => {
-  res.status(200).send("Welcome to Our CMS Platform");
+    res.status(200).send("Welcome to Our CMS Platform");
 });
 
 app.all("*", (req, res, next) => {
-  res.status(404).json({
-    status: "fail",
-    message: `Can't find ${req.originalUrl} on this server!`,
-  });
+    res.status(404).json({
+        status: "fail",
+        message: `Can't find ${req.originalUrl} on this server!`,
+    });
 });
 //GLOBAL ERROR HANDLER
 app.use(globalErrorHandler);
