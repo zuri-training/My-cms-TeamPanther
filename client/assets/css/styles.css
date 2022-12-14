@@ -10,6 +10,7 @@
     --grey-300: #939294;
 }
 
+
 @layer base {
     *,
     html,
@@ -19,6 +20,7 @@
         box-sizing: border-box;
     }
 
+   
     h1,
     h2,
     h3,
@@ -45,6 +47,11 @@
         padding: 0px 20px;
         margin: 0 auto;
     }
+
+
+    
+  
+
 }
 
 @layer components {
@@ -61,6 +68,10 @@
         width: max-content;
         border: none;
     }
+    
+button{
+    background-color: black;
+}
 
     .btn.btn-primary {
         background: var(--primary-blue);
@@ -81,7 +92,7 @@
 }
 
 header {
-    padding: 20px 0;
+    padding: 30px 0;
     background-color: white;
 }
 
@@ -288,6 +299,10 @@ footer .bottom {
     color: white;
 }
 
+
+
+
+
 @layer swiper {
     .swiper {
         overflow: visible;
@@ -304,3 +319,5 @@ footer .bottom {
         margin: 0px 7.5px;
     }
 }
+
+
