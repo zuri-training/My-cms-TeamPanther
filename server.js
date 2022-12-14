@@ -15,7 +15,7 @@ const pageRoutes = require("./server/routes/pageRoutes");
 const connect = require("./server/database/connection"); //connecting to the dataBase
 connect.connect(); //calling the connect function to enable connection to local or Atlas hosted DB.
 
-const HOST = process.env.HOST || "localhost";
+const HOST = process.env.HOST || "0.0.0.0" || "localhost";
 const API_PORT = process.env.PORT || process.env.API_PORT || 4001; //acquiring port from .env files
 
 const app = express(); //instantiating
