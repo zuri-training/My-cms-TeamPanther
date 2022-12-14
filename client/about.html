@@ -6,9 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
         <link rel="stylesheet" href="/assets/css/styles.css" />
+        <link rel="stylesheet" href="/assets/css/about.css" />
         <title>About | Panther Site Builder</title>
     </head>
-    <body>
+    <body id="about">
         <header>
             <div class="container">
                 <div class="header-content-wrapper">
@@ -21,7 +22,8 @@
                     </div>
                     <nav>
                         <ul>
-                            <li class="active">Home</li>
+                            <li><a href="/">Home</a></li>
+                            <li class="active"><a href="">About</a></li>
                             <li>Template</li>
                             <li>Pricing</li>
                             <li>Faq</li>
@@ -29,6 +31,7 @@
                         </ul>
                     </nav>
                     <div class="btn btn-primary">Start for Free</div>
+                    <div class="menu"><span></span><span></span><span></span></div>
                 </div>
             </div>
         </header>
@@ -152,6 +155,8 @@
             </div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+        <script src="/assets/js/index.js"></script>
         <script>
             const swiper = new Swiper(".swiper", {
                 pagination: {
