@@ -1,0 +1,201 @@
+.createTemplate {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 79px;
+  margin-left: 200px;
+  color: #282529;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+
+
+span {
+  color: #0e83b5;
+}
+
+button {
+  border: none;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 150px;
+  margin-right: 150px;
+
+
+}
+
+.btn_entertainment {
+  margin-left: 20px;
+  width: 289px;
+  height: 87px;
+  color: white;
+  background-color: #0e83b5;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.btn_food {
+  margin-left: 20px;
+  width: 289px;
+  height: 87px;
+  color: white;
+  background-color: #0e83b5;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.btn_fashion {
+  margin-left: 20px;
+  width: 289px;
+  height: 87px;
+  color: white;
+  background-color: #0e83b5;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.btn_beauty {
+  margin-left: 20px;
+  width: 289px;
+  height: 87px;
+  color: white;
+  background-color: #0e83b5;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.middle {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.btn_fitness {
+  margin-left: 20px;
+  width: 289px;
+  height: 87px;
+  color: white;
+  background-color: #0e83b5;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.btn_travel {
+  margin-left: 20px;
+  width: 289px;
+  height: 87px;
+  background-color: #0e83b5;
+  color: white;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.btn_art {
+  margin-left: 20px;
+  width: 289px;
+  height: 87px;
+  color: white;
+  background-color: #0e83b5;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.btn_photography {
+  margin-left: 20px;
+  width: 289px;
+  height: 87px;
+  background-color: #0e83b5;
+  color: white;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.btn_music {
+  margin-left: 20px;
+  width: 289px;
+  height: 87px;
+  color: white;
+  background-color: #0e83b5;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.bottom {
+  display: flex;
+margin-left: 40px;
+  margin-top: 40px;
+ 
+}
+
+.btn_magazine {
+  margin-left: 110px;
+  width: 289px;
+  height: 87px;
+  background-color: #0e83b5;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: white;
+
+}
+
+.btn_design {
+
+  width: 289px;
+  height: 87px;
+  color: white;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  background-color: #0e83b5;
+  margin-left: 50px;
+}
