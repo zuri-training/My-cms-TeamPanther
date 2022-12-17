@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/assets/css/dashboard.css" />
         <title>Dashboard | Panther CMS</title>
     </head>
+
     <body>
         <!-- Header part of the dashboard -->
         <header>
@@ -53,8 +54,8 @@
                     <img src="/assets/images/testimonial-1.png" alt="profile" />
 
                     <div>
-                        <h2>Henry Issac</h2>
-                        <p>@henac_01234</p>
+                        <h2>{{{fullName}}}</h2>
+                        <p>{{{tagName}}}</p>
                     </div>
                 </section>
                 <section>
@@ -79,9 +80,8 @@
                         </ul>
                     </nav>
                     <button class="btn btn-primary">
-                        <img src="/assets/images/back-to-home.svg" alt="back to home" /><span
-                            >Back to Home</span
-                        >
+                        <img src="/assets/images/back-to-home.svg" alt="back to home" /><span>Back
+                            to Home</span>
                     </button>
                 </section>
             </aside>
@@ -92,7 +92,7 @@
                         <header>
                             <div>
                                 <h1>Welcome Back,</h1>
-                                <p>Henry Isaac</p>
+                                <p>{{{fullName}}}</p>
                             </div>
                             <select class="btn btn-primary" name="actions" id="">
                                 <option value="">Site Actions</option>
@@ -109,8 +109,7 @@
                                     <h2>Henac Travel Blog</h2>
                                     <div>
                                         <span
-                                            >https://mail34780.panthersite.com/henacblablabla</span
-                                        >
+                                        >https://mail34780.panthersite.com/henacblablabla</span>
                                         <img src="/assets/images/export.svg" alt="export" />
                                     </div>
                                     <a href="">Personalize Your Domain </a>
@@ -138,9 +137,7 @@
                     <section class="new-content icon-cards">
                         <header>
                             <h2>Create new Content</h2>
-                            <a href=""
-                                ><span>See all</span
-                                ><svg
+                            <a href=""><span>See all</span><svg
                                     width="18"
                                     height="18"
                                     viewBox="0 0 18 18"
@@ -154,7 +151,7 @@
                                         stroke-miterlimit="10"
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
-                                    />
+                                    ></path>
                                 </svg>
                             </a>
                         </header>
@@ -240,9 +237,7 @@
                     <section class="report icon-cards">
                         <header>
                             <h2>Site Report</h2>
-                            <a href=""
-                                ><span>See analytics</span
-                                ><svg
+                            <a href=""><span>See analytics</span><svg
                                     width="18"
                                     height="18"
                                     viewBox="0 0 18 18"
@@ -256,7 +251,7 @@
                                         stroke-miterlimit="10"
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
-                                    />
+                                    ></path>
                                 </svg>
                             </a>
                         </header>
@@ -289,4 +284,5 @@
             </section>
         </main>
     </body>
+
 </html>

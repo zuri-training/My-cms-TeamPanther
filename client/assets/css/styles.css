@@ -64,6 +64,11 @@
         border: none;
     }
 
+    .btn a {
+        color: white;
+        text-decoration: none;
+    }
+
     button {
         background-color: black;
     }
