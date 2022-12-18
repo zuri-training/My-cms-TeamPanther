@@ -6,10 +6,12 @@ const globalErrorHandler = require("./server/controller/errorController");
 const auth = require("./server/controller/authController");
 const morgan = require("morgan");
 const path = require("path");
+const { engine } = require("express-handlebars");
 
 // IMPORT ROUTES
 const userRoutes = require("./server/routes/userRoutes");
 const pageRoutes = require("./server/routes/pageRoutes");
+const dashboardRoutes = require("./server/routes/dashboardRoutes");
 
 //IMPORT DB CONNECTION
 const connect = require("./server/database/connection"); //connecting to the dataBase
@@ -20,6 +22,11 @@ const API_PORT = process.env.PORT || process.env.API_PORT || 4001; //acquiring p
 
 const app = express(); //instantiating
 
+// Handlebars init
+app.engine("handlebars", engine());
+app.set("view engine", "handlebars");
+app.set("views", "./views");
+
 // MIDDLE-WARES
 app.use(express.urlencoded({ extended: true }));
 app.use("/", pageRoutes);
@@ -29,6 +36,7 @@ app.use(morgan("dev"));
 
 //ROUTES
 app.use("/home", userRoutes); //Defining a middle-ware, a path to display todo items/create/update/delete
+app.use("/dashboard", dashboardRoutes); //Defining a middle-ware, a path to display todo items/create/update/delete
 app.get("/home", auth.protect, (req, res) => {
     res.status(200).send("Welcome to Our CMS Platform");
 });
