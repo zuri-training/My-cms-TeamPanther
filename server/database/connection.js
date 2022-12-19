@@ -9,6 +9,7 @@ exports.connect = () => {
   mongoose
     .connect(MONGO_URL || DATABASE_LOCAL, {
       useNewUrlParser: true,
+      useUnifiedTopology : true
     })
     .then(() => {
       console.log("Connected to Database Successfully!");

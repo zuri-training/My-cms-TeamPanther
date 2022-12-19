@@ -4,12 +4,43 @@ const authController = require("../controller/authController");
 
 // Chaining the various routes!
 //ADMIN CAN HANDLE THESE FUNCTIONS
-// router
-//   .get("/", controller.retrieveAllUsers)
-//   .get("/:id", controller.getOneUsers)
-//   .post("/", controller.createAUsers)
-//   .put("/:id", controller.updateOneUsers)
-//   .delete("/:id", controller.deleteOneUsers);
+router
+  .get(
+    "/",
+    authController.protect,
+    authController.restrictTo("admin", "privileged-user", "user"),
+    userController.getAllUsers
+  )
+  .get(
+    "/:email",
+    authController.protect,
+    authController.restrictTo("admin", "privileged-user"),
+    userController.getOneUser
+  )
+  .post(
+    "/",
+    authController.protect,
+    authController.restrictTo("admin", "privileged-user"),
+    userController.createNewUser
+  )
+  .put(
+    "/:id",
+    authController.protect,
+    authController.restrictTo("admin", "privileged-user"),
+    userController.updateOneUser
+  )
+  .patch(
+    "/:id",
+    authController.protect,
+    authController.restrictTo("admin", "privileged-user"),
+    userController.updateOneUser
+  )
+  .delete(
+    "/",
+    authController.protect,
+    authController.restrictTo("admin", "privileged-user"),
+    userController.deleteOneUser
+  );
 
 //PROTECT PAGES WITH MIDDLE WARE
 // router
@@ -22,6 +53,13 @@ const authController = require("../controller/authController");
 //authentication Routes : Signup & Login
 router
   .post("/signup", authController.signup)
-  .post("/login", authController.login);
+  .post("/login", authController.login)
+  .post("/forgotPassword", authController.forgotPassword)
+  .patch("/resetPassword/:token", authController.resetPassword)
+  .patch(
+    "/dash-board/updatePassword",
+    authController.protect,
+    authController.updatePassword
+  );
 
 module.exports = router;
