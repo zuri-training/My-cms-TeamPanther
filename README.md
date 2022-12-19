@@ -43,3 +43,6 @@ TeamPanther Backend Developers, Headed by Chukwuezi Precious
 ## PROGRESS
 
 Project is still ongoing. Pages and styles are being created and logic to connect frontend with backend is on going
+
+## Live version of Project 
+[panther-cms](panther-cms.herokuapp.com)
