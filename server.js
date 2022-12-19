@@ -29,12 +29,12 @@ app.set("views", "./views");
 
 // MIDDLE-WARES
 app.use(express.urlencoded({ extended: true }));
-app.use("/", pageRoutes);
 app.use(express.static(path.join(__dirname, "client")));
 app.use(json()); // Enable parsing of json objects in body of request
 app.use(morgan("dev"));
 
 //ROUTES
+app.use("/", pageRoutes);
 app.use("/home", userRoutes); //Defining a middle-ware, a path to display todo items/create/update/delete
 app.use("/dashboard", dashboardRoutes); //Defining a middle-ware, a path to display todo items/create/update/delete
 app.get("/home", auth.protect, (req, res) => {
