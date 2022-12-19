@@ -6,58 +6,50 @@ const authController = require("../controller/authController");
 //ADMIN CAN HANDLE THESE FUNCTIONS
 router
   .get(
-    "/",
+    "/users",
     authController.protect,
     authController.restrictTo("admin", "privileged-user", "user"),
     userController.getAllUsers
   )
   .get(
-    "/:email",
+    "/users/:email",
     authController.protect,
     authController.restrictTo("admin", "privileged-user"),
     userController.getOneUser
   )
   .post(
-    "/",
+    "/users",
     authController.protect,
     authController.restrictTo("admin", "privileged-user"),
     userController.createNewUser
   )
   .put(
-    "/:id",
+    "/users:id",
     authController.protect,
     authController.restrictTo("admin", "privileged-user"),
     userController.updateOneUser
   )
   .patch(
-    "/:id",
+    "/users:id",
     authController.protect,
     authController.restrictTo("admin", "privileged-user"),
     userController.updateOneUser
   )
   .delete(
-    "/",
+    "/users",
     authController.protect,
     authController.restrictTo("admin", "privileged-user"),
     userController.deleteOneUser
   );
 
-//PROTECT PAGES WITH MIDDLE WARE
-// router
-//   .get("/", authController.protect, userController.retrieveAllUsers)
-//   .get("/:id", authController.protect, userController.getOneUsers)
-//   .post("/", authController.protect, userController.createAUsers)
-//   .put("/:id", authController.protect, userController.updateOneUsers)
-//   .delete("/:id", authController.protect, userController.deleteOneUsers);
-
 //authentication Routes : Signup & Login
 router
   .post("/signup", authController.signup)
   .post("/login", authController.login)
-  .post("/forgotPassword", authController.forgotPassword)
-  .patch("/resetPassword/:token", authController.resetPassword)
+  .post("/login/forgotPassword", authController.forgotPassword)
+  .patch("/login/resetPassword/:token", authController.resetPassword)
   .patch(
-    "/dash-board/updatePassword",
+    "/dashboard/updatePassword",
     authController.protect,
     authController.updatePassword
   );
