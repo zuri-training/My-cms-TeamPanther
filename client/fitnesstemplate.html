@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website Template</title>
+    <link rel="stylesheet" href="/foodtemplate.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content-wrapper">
+                <div class="logo">
+                    <img src="/assets//images/logo.svg" alt="Panther Site Builder logo" />
+                    <div>
+                        <span>Panther</span>
+                        <span>Site Builder</span>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li class="active">Home</li>
+                        <li>Template</li>
+                        <li>Pricing</li>
+                        <li>Faq</li>
+                        <li>Login</li>
+                    </ul>
+                </nav>
+                <div class="btn btn-primary">Start for Free</div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="food">
+
+        <h2 style="text-align: center;">Fitness Website Template </h2>
+
+    </div>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/assets/images/fitness1.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/images/fitness2.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/images/fitness3.png" alt="" />
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".swiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            slidesPerView: 2,
+            spaceBetween: 80,
+        });
+    </script>
+</body>
+
+</html>

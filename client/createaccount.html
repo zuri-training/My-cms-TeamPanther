@@ -1,45 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>create account</title>
-    <link rel="stylesheet" href="./account.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./account.css" />
+  </head>
+  <body>
     <main>
-        <div class="content">
-        <h1>Create An Account</h1> 
-        <p>Already have an account?<a href="#">Log in</a></p>
-      <form>
-     <div class="fname">
-        <label for="fname" >First name
-      <input type="text" name="fname" required class="space">
-    </label> </div><br>
-    <div class="lname"> 
-        <label for="lname" >Last name
-      <input type="text" name="lname" required class="space">
-    </label> </div><br>
-    <label for="email" >Email
-        <input type="email" name="email" required class="space">
-      </label><br>
-       <div class="fname">
-        <label for="password">Password
-        <input type="password" name="password" required class="space">
-      </label> </div><br>
-     <div class="lname">
-         <label for="password">Confirm Password
-        <input type="password" name="password" required class="space">
-      </label> </div><br>
-      
-     <input type="checkbox" class="button"  checked>
-     <p class="p2">I agree to terms and conditions</p>
-    <input type="submit" value="Create Account" class="register">
-  
-      </form>
-  </div>
-  </main>
-    <img src="./image 3.png" class="img3">
-</body>
+      <div class="content">
+        <h1>Create An Account</h1>
+        <p>Already have an account?<a href="/login">Log in</a></p>
+        <form>
+          <div class="fname">
+            <label for="fname"
+              >First name
+              <input type="text" name="fname" required class="space" />
+            </label>
+          </div>
+          <br />
+          <div class="lname">
+            <label for="lname"
+              >Last name
+              <input type="text" name="lname" required class="space" />
+            </label>
+          </div>
+          <br />
+          <label for="email"
+            >Email
+            <input type="email" name="email" required class="space" /> </label
+          ><br />
+          <div class="fname">
+            <label for="password"
+              >Password
+              <input type="password" name="password" required class="space" />
+            </label>
+          </div>
+          <br />
+          <div class="lname">
+            <label for="password"
+              >Confirm Password
+              <input type="password" name="cpassword" required class="space" />
+            </label>
+          </div>
+          <br />
+
+          <input type="checkbox" class="button" checked />
+          <p class="p2">I agree to terms and conditions</p>
+          <input type="submit" value="Create Account" class="register" />
+        </form>
+      </div>
+    </main>
+    <img src="./image 3.png" class="img3" />
+    <script>
+      const form = document.forms[0];
+      form.onsubmit = async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        const payload = {
+          firstName: formData.get("fname"),
+          lastName: formData.get("lname"),
+          email: formData.get("email"),
+          password: formData.get("password"),
+          passwordConfirm: formData.get("cpassword"),
+        };
+
+        const response = await fetch("/signup", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+
+        const { message } = await response.json();
+
+        if (response.ok) {
+          alert("Signup Successfull");
+          window.location.pathname = "/dashboard";
+        } else {
+          alert(`Could not Create account - ${message}`);
+        }
+      };
+    </script>
+  </body>
 </html>

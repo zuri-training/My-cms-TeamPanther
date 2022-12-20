@@ -1,0 +1,121 @@
+.CreateAnAccount{
+    width: 632px;
+    height: 800px;
+    background-color: #D9D9D9;
+    opacity: 80%;
+    border-radius: 30px;
+    margin-left: 50px;
+    margin-top: 50px;
+    }
+    
+    .content{
+        text-align: center;
+        padding-top: 35px;
+        padding-left: 15px;
+    }
+    
+    .createHeader{
+        color: #000000;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 54px;
+    }
+    
+    .pAccount{
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        font-family: 'Times New Roman', Times, serif;
+    
+    }
+    .Span_Login{
+        font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    
+    }
+    
+    
+    .inputFields{
+        text-align: left;
+        padding-left: 70px;
+    
+    }
+    
+    .name_label{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: #000000;
+    }
+    
+    .input_name{
+        width: 442px;
+        height: 61px;
+        border-radius: 10px;
+         background: #858383;
+         border: none;
+         font-size: 20px;
+         
+        
+    }
+    
+    .email_label{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: #000000;
+    }
+    
+    .input_email{
+        width: 442px;
+        height: 61px;
+        border-radius: 10px;
+        background: #858383;
+        border: none;
+        font-size: 20px;
+    
+    }
+    
+    .password_label{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: #000000;
+    }  
+    
+    .input_password{
+        width: 442px;
+        height: 61px;
+        border-radius: 10px;
+        background: #858383;
+        border: none;
+        font-size: 20px;
+    
+    }
+    
+    .terms{
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+    }
+    
+    .createBtn{
+        width: 220px;
+        height: 57px;
+        border-radius: 10px;
+        margin-left: 120px;
+        background-color: #858383;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        border: none;
+        cursor: pointer;
+    }

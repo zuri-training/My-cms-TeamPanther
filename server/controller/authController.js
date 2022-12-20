@@ -109,10 +109,17 @@ exports.login = catchAsync(async (req, res, next) => {
 
   //2. Check if the user exists and the password is correct
   const user = await User.findOne({ email }).select("+password");
+
+  if (!user) {
+    return next(
+      new AppError("No user with this email, please create and account", 401)
+    );
+  }
+
   const correct = await user.correctPassword(password, user.password); //using the instance method defined in userModels
 
-  if (!user || !correct) {
-    return next(new AppError("Incorrect email or password", 401)); //Customize error handler function
+  if (!correct) {
+    return next(new AppError("Incorrect email or password", 401));
   }
 
   //3. send the jwt back to the client

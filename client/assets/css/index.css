@@ -1,0 +1,352 @@
+@import url(./styles.css);
+
+main h2 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 150%;
+    text-align: center;
+    color: #07425b;
+}
+
+main h3 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    color: #07425b;
+}
+
+section#hero {
+    padding-top: 80px;
+    background-image: linear-gradient(180deg, #fff3d7 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+section#hero .hero-content {
+    display: grid;
+    gap: 40px;
+    text-align: center;
+    place-items: center;
+    max-width: 1000px;
+    margin: 0px auto;
+    margin-bottom: 80px;
+    padding: 0px 20px;
+}
+
+section#hero .hero-content h1 {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 110%;
+    text-align: center;
+    color: var(--primary-dark-blue);
+}
+
+section#hero .hero-content p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.15px;
+    color: var(--grey-600);
+}
+
+section#hero .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(10px, 3vw, 40px);
+}
+section#hero .gallery img {
+    aspect-ratio: 557/418;
+    filter: drop-shadow(0px 30px 53px rgba(0, 0, 0, 0.16));
+}
+
+section#features > div {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 20px;
+    gap: 50px;
+}
+
+section#features section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+section#features section article {
+    width: 100%;
+    max-width: 340px;
+    display: grid;
+    gap: 30px;
+    place-items: center;
+    text-align: center;
+}
+
+section#features section article .icon {
+    border-radius: 999px;
+    width: 134px;
+    padding: 20px;
+    background-color: white;
+}
+
+section#features section article .icon img {
+    aspect-ratio: 1/1;
+    width: 94px;
+}
+
+section#features section article p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #07425b;
+}
+
+section#features section article:nth-child(1) .icon {
+    box-shadow: 21px 41px 100px rgba(39, 172, 164, 0.29);
+}
+
+section#features section article:nth-child(2) .icon {
+    box-shadow: 21px 41px 100px rgba(232, 76, 80, 0.29);
+}
+
+section#features section article:nth-child(3) .icon {
+    box-shadow: 21px 41px 100px rgba(101, 234, 118, 0.29);
+}
+
+section#mission > .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+section#mission section {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+@media screen and (max-width: 900px) {
+    section#mission section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+section#mission section > .mission-image-wrapper {
+    max-width: 446px;
+    position: relative;
+    isolation: isolate;
+}
+
+section#mission section > .mission-image-wrapper::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    inset: 0;
+    translate: -50px -50px;
+    width: 100%;
+    height: 100%;
+    background-color: #86c1da;
+}
+
+section#mission section article {
+    max-width: 480px;
+    position: relative;
+    isolation: isolate;
+}
+
+section#mission section article img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: -20% -20%;
+    z-index: -1;
+    width: 150px;
+}
+
+section#mission section h2 {
+    text-align: left;
+}
+
+section#mission section p {
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.15px;
+    color: var(--grey-600);
+}
+
+section#howto {
+    background-color: #095779;
+}
+
+section#howto > div {
+    display: flex;
+    gap: 64px;
+}
+
+@media screen and (max-width: 900px) {
+    section#howto > div {
+        flex-direction: column;
+    }
+}
+
+section#howto header {
+    background-color: transparent;
+    color: white;
+    text-align: left;
+    max-width: 375px;
+}
+
+section#howto header h2 {
+    text-align: left;
+    color: white;
+}
+
+section#howto section {
+    display: grid;
+    flex: 1;
+    padding: 0;
+    gap: 20px;
+}
+
+section#howto .accordion {
+    background: #07425b;
+    border-radius: 20px;
+    position: relative;
+}
+
+section#howto .accordion-header {
+    background: #87c1da;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+section#howto .accordion-header h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 202.5%;
+    letter-spacing: 1.25px;
+    color: #07425b;
+    text-align: left;
+}
+
+section#howto .accordion-content {
+    color: white;
+    padding: 20px;
+}
+
+section#testimonial > div {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+section#testimonial > div > section {
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section#testimonial > div > section {
+    padding: 0;
+}
+
+section#testimonial > div > section article {
+    max-width: 332px;
+    background-color: white;
+    box-shadow: 0px 25px 56px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+section#testimonial > div > section article header {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}
+
+section#testimonial > div > section article header section {
+    padding: 0;
+}
+
+section#testimonial > div > section article header h3 {
+    text-align: left;
+}
+
+section#testimonial > div > section article header img {
+    width: 75px;
+}
+
+section#testimonial > div > section article p {
+    line-height: 150%;
+}
+
+section#get-started {
+    padding: 120px 20px;
+}
+
+section#get-started > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 161px 110px;
+
+    background: #0e83b5;
+    box-shadow: 0px 34px 48px rgba(14, 131, 181, 0.15);
+    border-radius: 44px;
+}
+
+@media screen and (max-width: 900px) {
+    section#get-started > div {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 50px;
+    }
+}
+
+section#get-started > div > div {
+    max-width: 600px;
+}
+
+section#get-started > div > div h2 {
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+    color: #cfe6f0;
+    text-align: left;
+}
+
+section#get-started > div > div p {
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.15px;
+    color: #cfe6f0;
+}
+
+section#get-started > div button {
+    background: #cfe6f0;
+    box-shadow: 0px 6px 30px rgba(14, 131, 181, 0.12);
+    border-radius: 4px;
+    color: var(--primary-dark-blue);
+}
