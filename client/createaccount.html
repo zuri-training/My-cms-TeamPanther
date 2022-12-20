@@ -11,7 +11,7 @@
     <main>
       <div class="content">
         <h1>Create An Account</h1>
-        <p>Already have an account?<a href="#">Log in</a></p>
+        <p>Already have an account?<a href="/login">Log in</a></p>
         <form>
           <div class="fname">
             <label for="fname"
@@ -68,7 +68,7 @@
           passwordConfirm: formData.get("cpassword"),
         };
 
-        const response = await fetch("/home/signup", {
+        const response = await fetch("/signup", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -76,7 +76,14 @@
           body: JSON.stringify(payload),
         });
 
-        const data = await response.json();
+        const { message } = await response.json();
+
+        if (response.ok) {
+          alert("Signup Successfull");
+          window.location.pathname = "/dashboard";
+        } else {
+          alert(`Could not Create account - ${message}`);
+        }
       };
     </script>
   </body>

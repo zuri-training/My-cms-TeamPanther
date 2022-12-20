@@ -8,6 +8,9 @@ router
   .get("/faq", (_, res) => res.sendFile(getFile("faq.html")))
   .get("/login", (_, res) => res.sendFile(getFile("login.html")))
   .get("/register", (_, res) => res.sendFile(getFile("createaccount.html")))
+  .get("/forgot-password", (_, res) =>
+    res.sendFile(getFile("forgot-password.html"))
+  )
   .get("/pricing", (_, res) => res.sendFile(getFile("ourpricing.html")))
   .get("/templates", (_, res) => res.sendFile(getFile("template.html")));
 

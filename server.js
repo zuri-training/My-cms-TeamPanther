@@ -9,7 +9,7 @@ const path = require("path");
 const { engine } = require("express-handlebars");
 const bodyParser = require("body-parser");
 const rateLimit = require("express-rate-limit");
-const helmet = require("helmet");
+// const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 
@@ -33,16 +33,16 @@ app.set("view engine", "handlebars");
 app.set("views", "./views");
 
 // GLOBAL MIDDLE-WARES
-app.use(helmet()); //-->Set Security HTTP headers
+// app.use(helmet()); //-->Set Security HTTP headers
 
-//Limit request from the same API
-const limit = rateLimit({
-  max: 100,
-  windowMs: 60 * 60 * 1000,
-  message: "Too many requests from this IP, please try again in one hour!",
-});
+// //Limit request from the same API
+// const limit = rateLimit({
+//   max: 100,
+//   windowMs: 60 * 60 * 1000,
+//   message: "Too many requests from this IP, please try again in one hour!",
+// });
 
-app.use("*", limit); //to restrict the number of requests from a particular IP per hour
+// app.use("*", limit); //to restrict the number of requests from a particular IP per hour
 
 //Enable development logging
 if (`${process.env.NODE_ENV}` === "development") {
@@ -80,4 +80,6 @@ app.all("*", (req, res, next) => {
 // GLOBAL ERROR HANDLER
 app.use(globalErrorHandler);
 
-app.listen(API_PORT, () => console.log(`Serving on port ${API_PORT}.`));
+app.listen(API_PORT, HOST, () =>
+  console.log(`Serving on port http://${HOST}:${API_PORT}.`)
+);
