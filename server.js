@@ -81,6 +81,6 @@ app.all("*", (req, res, next) => {
 // GLOBAL ERROR HANDLER
 app.use(globalErrorHandler);
 
-app.listen(API_PORT, HOST, () =>
+app.listen(API_PORT, () =>
   console.log(`Serving on port http://${HOST}:${API_PORT}.`)
 );
