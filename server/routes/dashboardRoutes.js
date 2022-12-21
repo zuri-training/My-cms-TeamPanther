@@ -7,14 +7,15 @@ const User = require("../models/userModel");
 
 router
   .get("/", async (req, res) => {
-    const jwtCookie = req.headers.cookie.split("=")[1];
-    const jwtUser = jwt.decode(jwtCookie);
+    const jwtCookie = req.headers.cookie?.split("=")[1];
 
-    if (!jwtUser) {
+    if (!jwtCookie) {
       return res.redirect("/login");
     }
 
-    const user = await User.findOne({ _id: jwtUser.id });
+    const jwtUser = jwt.decode(jwtCookie);
+
+    const user = await User.findOne({ _id: jwtUser?.id });
 
     if (!user) {
       return res.redirect("/login");
