@@ -1,0 +1,58 @@
+:root {
+    --clr-pry-blue: #0E83B5;
+    --clr-white: #FFFCF5;
+    
+    --padding-btn: 14px 20px;
+
+    --border-input: 5px;
+}
+
+.main-section {
+    display: unset;
+}
+
+button {
+    font-family: inherit;
+    font-size: 14px;
+    background: var(--clr-pry-blue);
+    color: var(--clr-white);
+    padding: var(--padding-btn);
+    border: none;
+    border-radius: var(--border-input);
+    outline: none;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+/* ==== Pages Control ==== */
+.pages-control {
+    margin-bottom: 1rem;
+}
+
+.pages-control h1 {
+    margin-bottom: 1rem;
+}
+
+.pages-control .form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pages-control .form-row form input,
+.pages-control .form-row form select {
+    padding: 13px;
+    font-size: 16px;
+    border-radius: var(--border-input);
+    border: 1px solid black;
+    color: var(--clr-pry-blue);
+}
+
+.pages-control .form-row form input {
+    width: 280px;
+}
+
+.pages-control .form-row form option {
+    /* color: var(--clr-pry-blue); */
+}

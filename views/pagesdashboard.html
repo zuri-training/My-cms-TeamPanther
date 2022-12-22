@@ -1,0 +1,137 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <link rel="stylesheet" href="/assets/css/dashboard.css" /> -->
+        <link rel="stylesheet" href="/client/assets/css/dashboard.css" />
+        <link rel="stylesheet" href="/client/assets/css/pagesdashboard.css" />
+        <title>Dashboard | Panther CMS</title>
+    </head>
+
+    <body>
+        <!-- Header part of the dashboard -->
+        <header>
+            <div>
+                <div class="logo">
+                    <img src="/assets//images/logo.svg" alt="Panther Site Builder logo" />
+                    <div>
+                        <span>Panther</span>
+                        <span>Site Builder</span>
+                    </div>
+                </div>
+                <span class="pipe"></span>
+                <select>
+                    <option value="">Manage Sites</option>
+                </select>
+                <span class="pipe"></span>
+                <select>
+                    <option value="">Explore</option>
+                </select>
+                <span class="pipe"></span>
+                <select>
+                    <option value="">Help</option>
+                </select>
+            </div>
+            <div>
+                <div class="input-wrapper">
+                    <img src="/assets/images/search.svg" alt="search icon" />
+                    <input type="search" placeholder="Search" />
+                </div>
+                <span class="pipe"></span>
+                <img src="/assets/images/bell.svg" alt="bell icon" class="bell" />
+                <span class="pipe"></span>
+                <img
+                    src="https://www.w3schools.com/howto/img_avatar.png"
+                    alt="profile image"
+                    class="profile-image"
+                />
+            </div>
+        </header>
+        <main>
+            <!-- this is the side bar -->
+            <aside>
+                <section class="article profile">
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="profile" />
+
+                    <div>
+                        <h2>{{{fullName}}}</h2>
+                        <p>{{{tagName}}}</p>
+                    </div>
+                </section>
+                <section>
+                    <nav>
+                        <ul>
+                            <li>
+                                <img src="/assets/images/dashboard.svg" alt="dashboard icon" />
+                                <p>Dashboard</p>
+                            </li>
+                            <li>
+                                <img src="/assets/images/content.svg" alt="content icon" />
+                                <p>Content</p>
+                            </li>
+                            <li>
+                                <img src="/assets/images/pages.svg" alt="pages icon" />
+                                <p>pages</p>
+                            </li>
+                            <li>
+                                <img src="/assets/images/report.svg" alt="report icon" />
+                                <p>Report</p>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="/"><button class="btn btn-primary">
+                        <img src="/assets/images/back-to-home.svg" alt="back to home" /><span>Back
+                            to Home</span>
+                    </button></a>
+                </section>
+            </aside>
+            <!-- This section, you would need to delete all these code, and your own content of the dashboard page youre to build -->
+            <section class="main-section">
+                <div class="pages-control">
+					<h1>Pages</h1>
+
+					<div class="form-row">
+						<button>Add New</button>
+						
+						<form action="">
+							<input type="search" name="" id="" placeholder="Search Pages">
+							
+							<select name="" id=""> 
+								<option value="" selected>Page Settings</option>
+								<option value="one">One</option>
+								<option value="two">Two</option>
+								<option value="three">Three</option>
+							</select>
+						</form>
+					</div>
+                </div>
+
+				<section class="pages-container">
+					<div class="pages-summary">
+						<h6>All <span>(4)</span></h6>
+						<h6>Published <span>(3)</span></h6>
+						<h6>Draft <span>(3)</span></h6>
+					</div>
+
+					<div class="pages-filter-control">
+						<form action="">
+							<select name="" id="">
+								<option value="">One</option>
+								<option value="">Two</option>
+								<option value="">Three</option>
+								<button>Filter</button>
+							</select>
+						</form>
+					</div>
+					
+					<div class="pages">
+						contents
+					</div>
+				</section>
+            </section>
+        </main>
+    </body>
+
+</html>
