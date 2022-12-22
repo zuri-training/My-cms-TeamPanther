@@ -51,13 +51,22 @@ select {
     color: var(--clr-pry-blue);
 }
 
+.pages-control .form-row form {
+    position: relative;
+}
+
 .pages-control .form-row form input {
     width: 280px;
     margin-right: 10px;
+    padding-left: 40px;
 }
 
-.pages-control .form-row form option {
+.pages-control .form-row form img {
     /* color: var(--clr-pry-blue); */
+    width: 25px;
+    position: absolute;
+    top: 26%;
+    left: 12px;
 }
 
 /* Pages filter control */
