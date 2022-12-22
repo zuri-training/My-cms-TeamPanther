@@ -55,7 +55,7 @@ This category lies the unauthenticated users, who are restricted to important fe
 
 1. Access the endpoint through the link.
 2. Sign-up/register to obtain access to spinning up the website of your choice.
-3. Once logged in, you can access and choose your any web template from our plethora of cool choices.
+3. Once logged in, you will be redirected to your dashboard where you can access and choose your any web template from our plethora of cool choices.
 4. Fill up the basic information to spin up your websites.
 5. You can also create links to social media pages or blogs in the template of your choice.
 
@@ -84,7 +84,7 @@ The following resources were helpful in preparing this application:
 - Slack and WhatsApp -> For communication among developers and product designers
 - Github -> For collaboration amongst developers, providing an online repository to host source code documentation.
 - VsCode -> The Main Editor used among the developers
-- MongoDB Atlas -> For data-bse provision and management.
+- MongoDB Atlas -> For data-base provision and management.
 
 # Application Features and Packages
 
@@ -127,4 +127,5 @@ The cms web application was implemented with the following packages:
 
 # Issues
 
-- The times-cope restricted the implementation of the full requirements, so just samples of expected web-app behavior are required.
+- The time-scope restricted the implementation of the full requirements, so just samples of expected web-app behavior were implemented.
+- Mild difficulty in rendering files to dasboard was experienced and was finally resolved.
