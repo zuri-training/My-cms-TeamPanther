@@ -56,3 +56,48 @@ h1 {
 .pages-control .form-row form option {
     /* color: var(--clr-pry-blue); */
 }
+
+/* ==== Pages Container ==== */
+.pages-container .pages-summary {
+    display: flex;
+}
+
+.pages-container .pages-summary h4 {
+    display: inline-block;
+    padding-inline: 1rem;
+}
+
+
+/* ==== TABLE ===== */
+table {
+    border: 1px solid var(--clr-pry-blue);
+    border-radius: 10px;
+    width: 100%;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+thead {
+    color: var(--clr-pry-blue);
+    border-bottom: 1px solid var(--clr-pry-blue);
+}
+
+td {
+    padding: 10px;
+}
+
+tbody span {
+    color: var(--clr-pry-blue);
+}
+
+table input[type=checkbox] {
+    width: 30px;
+    height: 30px;
+    margin-right: 14px;
+}
+
+tr td:first-child {
+    color: red;
+    display: flex;
+    align-items: center;
+}
