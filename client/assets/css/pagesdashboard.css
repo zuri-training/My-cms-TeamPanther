@@ -1,6 +1,7 @@
 :root {
     --clr-pry-blue: #0E83B5;
     --clr-white: #FFFCF5;
+    --clr-gray: #4C494D;
     
     --padding-btn: 14px 20px;
 
@@ -11,7 +12,7 @@
     display: unset;
 }
 
-button {
+.main-section button {
     font-family: inherit;
     font-size: 14px;
     background: var(--clr-pry-blue);
@@ -20,6 +21,7 @@ button {
     border: none;
     border-radius: var(--border-input);
     outline: none;
+    width: 110px;
 }
 
 h1 {
@@ -41,30 +43,60 @@ h1 {
 }
 
 .pages-control .form-row form input,
-.pages-control .form-row form select {
+select {
     padding: 13px;
     font-size: 16px;
     border-radius: var(--border-input);
-    border: 1px solid black;
+    border: 1px solid var(--clr-pry-blue);
     color: var(--clr-pry-blue);
 }
 
 .pages-control .form-row form input {
     width: 280px;
+    margin-right: 10px;
 }
 
 .pages-control .form-row form option {
     /* color: var(--clr-pry-blue); */
 }
 
-/* ==== Pages Container ==== */
-.pages-container .pages-summary {
+/* Pages filter control */
+.pages-filter-control {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.pages-container .pages-summary h4 {
+.pages-filter-control button {
+    margin-left: 10px;
+}
+
+.pages-filter-control p {
+    font-size: 20px;
+}
+
+/* ==== Pages Container ==== */
+.pages-container {
+    display: block;
+    margin-top: 2rem;
+}
+
+.pages-container .pages-summary {
+    display: flex;
+    margin-block: 13px;
+}
+
+.pages-container .pages-summary p {
     display: inline-block;
     padding-inline: 1rem;
+}
+
+.pages-container .pages-summary p:first-child {
+    padding-left: 0;
+}
+
+.pages-container .pages-summary p:nth-child(2) {
+    border-inline: 1px solid var(--clr-gray);
 }
 
 
@@ -75,15 +107,22 @@ table {
     width: 100%;
     font-size: 16px;
     font-family: inherit;
+    border-spacing: 0;
+    margin-block: 1.5rem;
 }
 
 thead {
     color: var(--clr-pry-blue);
+    font-size: 20px;
+}
+
+thead td {
     border-bottom: 1px solid var(--clr-pry-blue);
 }
 
 td {
-    padding: 10px;
+    padding: 14px 24px;
+    
 }
 
 tbody span {
@@ -97,7 +136,10 @@ table input[type=checkbox] {
 }
 
 tr td:first-child {
-    color: red;
     display: flex;
     align-items: center;
+}
+
+td:has(p) p:first-child {
+    margin-bottom: 4px;
 }
