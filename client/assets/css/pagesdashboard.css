@@ -129,6 +129,10 @@ thead td {
     border-bottom: 1px solid var(--clr-pry-blue);
 }
 
+thead img {
+    width: 30px;
+}
+
 td {
     padding: 14px 24px;
     
